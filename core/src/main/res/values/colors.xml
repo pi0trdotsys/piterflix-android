@@ -5,9 +5,9 @@
     <color name="primary_container_light">#d3e4ff</color>
     <color name="on_primary_container_light">#001c3a</color>
 
-    <color name="primary_dark">#a1c9ff</color>
-    <color name="on_primary_dark">#00315e</color>
-    <color name="primary_container_dark">#004884</color>
+    <color name="primary_dark">#e50914</color>
+    <color name="on_primary_dark">#ffffff</color>
+    <color name="primary_container_dark">#b20710</color>
     <color name="on_primary_container_dark">#d3e4ff</color>
 
     <!-- Secondary -->
@@ -27,8 +27,8 @@
     <color name="green_300">#71ca92</color>
     <color name="green_500">#24B364</color>
     <color name="green_800">#038043</color>
-    <color name="neutral_1000">#0E141A</color>
-    <color name="neutral_900">#121A21</color>
+    <color name="neutral_1000">#141414</color>
+    <color name="neutral_900">#181818</color>
     <color name="neutral_800">#243342</color>
     <color name="neutral_700">#374F67</color>
     <color name="neutral_400">#5D82A7</color>
@@ -42,6 +42,6 @@
     <color name="yellow">#F2C94C</color>
     <color name="player_background">#AA000000</color>
 
-    <color name="logo_primary">#FF3DDC84</color>
-    <color name="logo_secondary">#FF00A4DC</color>
+    <color name="logo_primary">#FFE50914</color>
+    <color name="logo_secondary">#FFB20710</color>
 </resources>

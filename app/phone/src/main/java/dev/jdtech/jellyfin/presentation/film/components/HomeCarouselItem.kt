@@ -5,7 +5,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -21,6 +21,9 @@ import androidx.compose.ui.graphics.painter.ColorPainter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.compose.ui.tooling.preview.Preview
 import coil3.compose.AsyncImage
 import dev.jdtech.jellyfin.core.presentation.dummy.dummyMovie
@@ -35,14 +38,14 @@ import dev.jdtech.jellyfin.presentation.theme.spacings
 fun HomeCarouselItem(item: FindroidItem, onAction: (HomeAction) -> Unit) {
     val colorStops =
         arrayOf(
-            0.0f to Color.Black.copy(alpha = 0.1f),
-            0.5f to Color.Black.copy(alpha = 0.5f),
-            1f to Color.Black.copy(alpha = 0.6f),
+            0.0f to Color.Black.copy(alpha = 0.05f),
+            0.42f to Color.Black.copy(alpha = 0.18f),
+            1f to Color.Black.copy(alpha = 0.95f),
         )
 
     Box(
         modifier =
-            Modifier.aspectRatio(1.77f).clip(MaterialTheme.shapes.large).clickable {
+            Modifier.fillMaxWidth().height(460.dp).clip(MaterialTheme.shapes.small).clickable {
                 onAction(HomeAction.OnItemClick(item))
             }
     ) {
@@ -73,6 +76,13 @@ fun HomeCarouselItem(item: FindroidItem, onAction: (HomeAction) -> Unit) {
                     else -> emptyList()
                 }
             Text(
+                text = "PITERFLIX  •  POLECANE",
+                color = Color(0xFFE50914),
+                fontWeight = FontWeight.Bold,
+                letterSpacing = 1.sp,
+                style = MaterialTheme.typography.labelSmall,
+            )
+            Text(
                 text = genres.joinToString(),
                 color = Color.LightGray,
                 overflow = TextOverflow.Ellipsis,
@@ -85,7 +95,13 @@ fun HomeCarouselItem(item: FindroidItem, onAction: (HomeAction) -> Unit) {
                 color = Color.White,
                 overflow = TextOverflow.Ellipsis,
                 maxLines = 2,
-                style = MaterialTheme.typography.titleLarge,
+                style = MaterialTheme.typography.headlineLarge,
+                fontWeight = FontWeight.Black,
+            )
+            Text(
+                text = "▶  Więcej informacji",
+                color = Color.White,
+                style = MaterialTheme.typography.labelLarge,
             )
         }
     }

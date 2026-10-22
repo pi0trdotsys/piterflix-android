@@ -17,12 +17,12 @@ android {
     buildToolsVersion = Versions.BUILD_TOOLS
 
     defaultConfig {
-        applicationId = "dev.jdtech.jellyfin"
+        applicationId = "eu.prosinski.piterflix"
         minSdk = Versions.MIN_SDK
         targetSdk = Versions.TARGET_SDK
 
         versionCode = Versions.APP_CODE
-        versionName = Versions.APP_NAME
+        versionName = "${Versions.APP_NAME}-piterflix.1"
 
         testInstrumentationRunner = "dev.jdtech.jellyfin.HiltTestRunner"
     }

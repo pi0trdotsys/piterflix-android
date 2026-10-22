@@ -19,7 +19,6 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.ColorPainter
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -54,7 +53,7 @@ fun HomeCarouselItem(item: FindroidItem, onAction: (HomeAction) -> Unit) {
             placeholder = ColorPainter(MaterialTheme.colorScheme.surfaceContainer),
             contentDescription = null,
             contentScale = ContentScale.Crop,
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier.fillMaxSize(),
         )
         Canvas(modifier = Modifier.fillMaxSize()) {
             drawRect(brush = Brush.verticalGradient(colorStops = colorStops))
@@ -66,8 +65,7 @@ fun HomeCarouselItem(item: FindroidItem, onAction: (HomeAction) -> Unit) {
                         horizontal = MaterialTheme.spacings.default,
                         vertical = MaterialTheme.spacings.medium,
                     )
-                    .align(Alignment.BottomStart)
-                    .onGloballyPositioned { coordinates -> coordinates.size },
+                    .align(Alignment.BottomStart),
         ) {
             val genres =
                 when (item) {
@@ -99,7 +97,7 @@ fun HomeCarouselItem(item: FindroidItem, onAction: (HomeAction) -> Unit) {
                 fontWeight = FontWeight.Black,
             )
             Text(
-                text = "▶  Więcej informacji",
+                text = "ⓘ  Więcej informacji",
                 color = Color.White,
                 style = MaterialTheme.typography.labelLarge,
             )

@@ -21,8 +21,8 @@ android {
         minSdk = Versions.MIN_SDK
         targetSdk = Versions.TARGET_SDK
 
-        versionCode = Versions.APP_CODE
-        versionName = "${Versions.APP_NAME}-piterflix.1"
+        versionCode = Versions.APP_CODE + 1
+        versionName = "${Versions.APP_NAME}-piterflix.1-beta.1"
 
         testInstrumentationRunner = "dev.jdtech.jellyfin.HiltTestRunner"
     }

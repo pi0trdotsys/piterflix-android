@@ -11,9 +11,10 @@ license is preserved in `LICENSE`. This repository contains the complete
 corresponding source for the Piterflix APK built from this tree.
 The original project README is preserved in `UPSTREAM_README.md`.
 
-The app is identified as `eu.prosinski.piterflix`, so it can coexist with
-Findroid. It uses Piterflix branding, a red and charcoal palette, a dark
-default theme, a cinematic home feature, and tighter corners across the app.
+The release package is identified as `eu.prosinski.piterflix` (test APKs add
+`.debug`), so it can coexist with Findroid. It uses Piterflix branding, a red
+and charcoal palette, a dark default theme, a cinematic home feature, and
+tighter corners across the app.
 Jellyfin playback, downloads, and offline mode come from Findroid.
 
 ## Build
